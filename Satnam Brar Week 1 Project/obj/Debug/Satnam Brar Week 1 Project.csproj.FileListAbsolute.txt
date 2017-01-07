@@ -1,1 +1,6 @@
 c:\users\wecancodeit\documents\visual studio 2015\Projects\Satnam Brar Week 1 Project\Satnam Brar Week 1 Project\bin\Debug\Satnam Brar Week 1 Project.exe.config
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Satnam Brar Week 1 Project\Satnam Brar Week 1 Project\bin\Debug\Satnam Brar Week 1 Project.exe
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Satnam Brar Week 1 Project\Satnam Brar Week 1 Project\bin\Debug\Satnam Brar Week 1 Project.pdb
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Satnam Brar Week 1 Project\Satnam Brar Week 1 Project\obj\Debug\Satnam Brar Week 1 Project.csprojResolveAssemblyReference.cache
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Satnam Brar Week 1 Project\Satnam Brar Week 1 Project\obj\Debug\Satnam Brar Week 1 Project.exe
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Satnam Brar Week 1 Project\Satnam Brar Week 1 Project\obj\Debug\Satnam Brar Week 1 Project.pdb
