@@ -10,29 +10,57 @@ namespace Satnam_Brar_Week_1_Project
     {
         static void Main(string[] args)
         {
+            //User will be able to quit the program at any time by entering "quit"
+            Console.WriteLine("You may exit the program at any time by entering \"quit\".\n");
+
+            //=============================================================================================================================
             //prompt user to enter first name
             //entry will be converted to lower case, followed by capitalization of the first letter
             Console.WriteLine("Please enter your first name:\n");
             string firstName = Console.ReadLine();
+
+            if (firstName.Equals("quit", StringComparison.CurrentCultureIgnoreCase))
+            {
+                Console.WriteLine("\nNo one likes a quitter...\n");
+                Environment.Exit(0);
+            }
+
             firstName = firstName.ToLower();
             string firstName1 = firstName.Substring(0, 1);
             firstName1 = firstName1.ToUpper();
-            firstName = firstName.Remove(0, 1);      
-            
+            firstName = firstName.Remove(0, 1);
+
+            //=============================================================================================================================
             //prompt user to enter last name
             //entry will be converted to lower case, followed by capitalization of the first letter
             Console.WriteLine("\nPlease enter your last name:\n");
             string lastName = Console.ReadLine();
+
+            if (lastName.Equals("quit", StringComparison.CurrentCultureIgnoreCase))
+            {
+                Console.WriteLine("\nNo one likes a quitter...\n");
+                Environment.Exit(0);
+            }
+
             lastName = lastName.ToLower();
             string lastName1 = lastName.Substring(0, 1);
             lastName1 = lastName1.ToUpper();
             lastName = lastName.Remove(0, 1);
 
+            //=============================================================================================================================
             //prompt user to enter his or her age
             //an error will pop up and ask the user to enter age again if entry is <=0
-                //however, this error can only work one time as there is no loop coded in, which we have not learned in class yet
+            //however, this error can only work one time as there is no loop coded in, which we have not learned in class yet
             Console.WriteLine("\nPlease enter your age:\n");
-            int age = int.Parse(Console.ReadLine());
+            string ageInput = Console.ReadLine();
+
+            if (ageInput.Equals("quit", StringComparison.CurrentCultureIgnoreCase))
+            {
+                Console.WriteLine("\nNo one likes a quitter...\n");
+                Environment.Exit(0);
+            }
+
+            int age = int.Parse(ageInput);
             if (age <= 0)
             {
                 Console.WriteLine("\nPlease enter a number greater than or equal to 1:\n");
@@ -40,6 +68,7 @@ namespace Satnam_Brar_Week_1_Project
                 age = age1;
             }
 
+            //=============================================================================================================================
             //create fortune based on age input
             int retire;
             if (age % 2 == 0)
@@ -51,10 +80,20 @@ namespace Satnam_Brar_Week_1_Project
                 retire = 75;
             }
 
+            //=============================================================================================================================
             //prompt user to enter his or her month of birth
             Console.WriteLine("\nPlease enter your month of birth: (i.e. 1 for January, 12 for December):\n");
-            int birthMonth = int.Parse(Console.ReadLine());
+            string monthInput = Console.ReadLine();
 
+            if (monthInput.Equals("quit", StringComparison.CurrentCultureIgnoreCase))
+            {
+                Console.WriteLine("\nNo one likes a quitter...\n");
+                Environment.Exit(0);
+            }
+
+            int birthMonth = int.Parse(monthInput);
+
+            //=============================================================================================================================
             //create fortune based on birth month input
             int money;
             if (birthMonth >=1 && birthMonth <=4)
@@ -74,21 +113,34 @@ namespace Satnam_Brar_Week_1_Project
                 money = 0;
             }
 
-
+            //=============================================================================================================================
             //prompt user to enter his or her favorite ROYGBIV color
             //allows user to ask for help in case he or she is not familiar with ROYGBIV
-                //if user enters help twice, there is no loop coded in to repeat output of help text
+            //if user enters help twice, there is no loop coded in to repeat output of help text
             //error output if color is not ROYGBIV. if user enter wrong color twice, there is no loop coded in to repeat error output
             Console.WriteLine("\nPlease enter your favorite ROYGBIV color:\n\nFor help, enter \"help\"\n");
             string help = "help";
             string color = Console.ReadLine();
+
+            if (color.Equals("quit", StringComparison.CurrentCultureIgnoreCase))
+            {
+                Console.WriteLine("\nNo one likes a quitter...\n");
+                Environment.Exit(0);
+            }
+
             if (color.Equals(help, StringComparison.CurrentCultureIgnoreCase))
             {
                 Console.WriteLine("\nROYGBIV Colors\nR = Red\nO = Orange\nY = Yellow\nG = Green\nB = Blue\nI = Indigo\nV = Violet\n");
                 Console.WriteLine("\nPlease enter your favorite ROYGBIV color:\n");
                 string color1 = Console.ReadLine();
+                if (color1.Equals("quit", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    Console.WriteLine("\nNo one likes a quitter...\n");
+                    Environment.Exit(0);
+                }
                 color = color1;
             }
+
             if (color.Equals("red", StringComparison.CurrentCultureIgnoreCase))
             {
                 color = "red";
@@ -121,9 +173,15 @@ namespace Satnam_Brar_Week_1_Project
             {
                 Console.WriteLine("\nPlease enter a valid ROYGBIV color:\n");
                 string color2 = Console.ReadLine();
+                if (color2.Equals("quit", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    Console.WriteLine("\nNo one likes a quitter...\n");
+                    Environment.Exit(0);
+                }
                 color = color2;
             }
 
+            //=============================================================================================================================
             //creates fortune based on favorite color
             string whip;
             switch (color)
@@ -154,11 +212,20 @@ namespace Satnam_Brar_Week_1_Project
                     break;
             }
 
+            //=============================================================================================================================
             //prompt user to enter number of siblings
             Console.WriteLine("\nPlease enter number of siblings:\n");
-            int numSiblings = int.Parse(Console.ReadLine());
-            string numSiblings1 = numSiblings.ToString();
+            string siblingInput = Console.ReadLine();
 
+            if (siblingInput.Equals("quit", StringComparison.CurrentCultureIgnoreCase))
+            {
+                Console.WriteLine("\nNo one likes a quitter...\n");
+                Environment.Exit(0);
+            }
+
+            int numSiblings = int.Parse(siblingInput);
+
+            //=============================================================================================================================
             //creates fortune based on number of siblings
             string vacaHome;
             if (numSiblings == 0)
@@ -186,6 +253,7 @@ namespace Satnam_Brar_Week_1_Project
                 vacaHome = "Antarctica";
             }
 
+            //=============================================================================================================================
             //Write out fortune based on user input
             Console.WriteLine("\nBased on the answers, the crystal ball shows...\n...\n...\n...\n\n" + firstName1 + firstName + " " + lastName1 + lastName + " will retire at the age of " + retire + " with $" + money + ".00 in the bank, a vacation home in " + vacaHome + ", and a " + whip + ".\n");
         }
